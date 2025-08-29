@@ -1,15 +1,18 @@
 Service Discovery allows Prometheus to populate a list of endpoints to scrape that can get dynamically updated as new endpoints get created and destroyed. Prometheus has built-in support for several service discovery mechanisms like AWS EC2, Azure, GCE, Consul, Nomad, Kubernetes. 
 
 **File Service Discovery**
+
 A list of jobs/targets can be imported from a file. This allows you to integrate with service discovery systems Prometheus doesn't support out of the box. Supports json and yaml. 
 ![Alt text](./file-service-discovery.png)
 
 **AWS EC2 Service Discovery**
+
 Cloud infrastructure is very dynamic especially when autoscaling is enabled. EC2 Service Discovery makes it so Prometheus has a list of all available EC2 instance to scrape.
-![Alt text](./aws-ec2-service-discovery.png)]
+![Alt text](./aws-ec2-service-discovery.png)
 ![Alt text](./aws-ec2-service-discovery-2.png)
 
 **Relabeling**
+
 Relabeling - allows you to classify/filter Prometheus targets and metrics by rewriting their label set.
 ![Alt text](./relabeling.png)
 ![Alt text](./relabeling-actions-1.png)
