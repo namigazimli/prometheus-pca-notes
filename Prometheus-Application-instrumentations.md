@@ -420,8 +420,7 @@ scrape_configs:
    (b) Add a label called `code` to this metric.
    (c) Variable name should be `ERRORS`.
 ```py
-ERRORS = Counter('http_errors_total',
-                 'Total number of errors', labelnames=['code'])
+ERRORS = Counter('http_errors_total', 'Total number of errors', labelnames=['code'])
 ```
    (d) In the function called `page_not_found` increment, the `ERRORS` metric and pass in the code label value as `404`.
 ```py
@@ -430,10 +429,7 @@ def page_not_found(e):
     ERRORS.labels('404').inc()
     return "page not found", 404
 ```
-     (e) Run the `flask.sh` command to restart the app.
-Note:
-The `flask.sh` script is located at: `/usr/local/bin/flask.sh`.
-Run the command `flask.sh` in the terminal to restart the app.
+    (e) Run the `flask.sh` command to restart the app.
 
 - Solution:
 ```py
